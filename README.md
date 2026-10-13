@@ -12,12 +12,41 @@ Selenium-based scripts for sending bulk WhatsApp messages and images via WhatsAp
 
 ## Requirements
 
+- Python 3.8+
+- Google Chrome installed
+- `pip install selenium webdriver-manager`
+
+## Download
+
+Clone the repository:
+
 ```
+git clone https://github.com/mradul-grit/whatsapp_automation.git
+cd whatsapp_automation
+```
+
+(Optional) create and activate a virtual environment before installing dependencies:
+
+```
+python -m venv venv
+venv\Scripts\activate
 pip install selenium webdriver-manager
 ```
 
-## Usage
+## Running
 
-Run any script directly with Python. On first run, scan the WhatsApp Web QR code
-in the browser window that opens; the Chrome profile is then persisted locally
-so you won't need to scan again on later runs.
+Run any script directly with Python, for example:
+
+```
+python auto.py
+```
+
+or for a UI-based script:
+
+```
+python whatsapp_automation_ui.py
+```
+
+On first run, a Chrome window opens to WhatsApp Web — scan the QR code with your
+phone to log in. The Chrome profile is then persisted locally (in the folder set
+inside the script), so you won't need to scan again on later runs.
